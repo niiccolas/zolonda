@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/zolonda/static/css/main.ad7c1737.chunk.css",
+    "main.js": "/zolonda/static/js/main.32261d85.chunk.js",
+    "main.js.map": "/zolonda/static/js/main.32261d85.chunk.js.map",
+    "runtime-main.js": "/zolonda/static/js/runtime-main.2f9a4dfa.js",
+    "runtime-main.js.map": "/zolonda/static/js/runtime-main.2f9a4dfa.js.map",
+    "static/js/2.c4e63627.chunk.js": "/zolonda/static/js/2.c4e63627.chunk.js",
+    "static/js/2.c4e63627.chunk.js.map": "/zolonda/static/js/2.c4e63627.chunk.js.map",
+    "index.html": "/zolonda/index.html",
+    "precache-manifest.d6221443362976e5c27656f35ad8740e.js": "/zolonda/precache-manifest.d6221443362976e5c27656f35ad8740e.js",
+    "service-worker.js": "/zolonda/service-worker.js",
+    "static/css/main.ad7c1737.chunk.css.map": "/zolonda/static/css/main.ad7c1737.chunk.css.map",
+    "static/js/2.c4e63627.chunk.js.LICENSE.txt": "/zolonda/static/js/2.c4e63627.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2f9a4dfa.js",
+    "static/js/2.c4e63627.chunk.js",
+    "static/css/main.ad7c1737.chunk.css",
+    "static/js/main.32261d85.chunk.js"
+  ]
+}
