@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/zolonda/precache-manifest.d6221443362976e5c27656f35ad8740e.js"
+  "/zolonda/precache-manifest.237083242ed0b330c68b8fb2d7cf6b9f.js"
 );
 
 self.addEventListener('message', (event) => {

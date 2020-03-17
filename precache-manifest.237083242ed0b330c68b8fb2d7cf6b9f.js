@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dec47cabc998b9035080992423b652da",
+    "revision": "760660cb7ac9014e32f2c2f55fe1a201",
     "url": "/zolonda/index.html"
   },
   {
-    "revision": "a3746fe4c7ba9cdecad4",
-    "url": "/zolonda/static/css/main.ad7c1737.chunk.css"
+    "revision": "6d91f76c41f451455d1c",
+    "url": "/zolonda/static/css/main.29767e17.chunk.css"
   },
   {
     "revision": "960877756950eb170ff4",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/zolonda/static/js/2.c4e63627.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a3746fe4c7ba9cdecad4",
+    "revision": "6d91f76c41f451455d1c",
     "url": "/zolonda/static/js/main.32261d85.chunk.js"
   },
   {
