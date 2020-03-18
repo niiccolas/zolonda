@@ -1,4 +1,4 @@
-exports.sections = [
+export default [
   {
     title: 'HATS',
     imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',

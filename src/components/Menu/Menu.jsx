@@ -4,7 +4,7 @@ import MenuItem from '../MenuItem/MenuItem';
 
 import './Menu.scss';
 
-import { sections } from './Menu.data';
+import sections from './Menu.data';
 
 class Menu extends React.Component {
   constructor() {
