@@ -22,13 +22,13 @@
     & .MenuItem__bgImage {
       transform: scale(1.2);
       opacity: 1;
-      transition: transform 6s cubic-bezier(.25, .45, .45, .95),
+      transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95),
         opacity 1s ease;
     }
 
     & .MenuItem__content {
       background-color: rgba(255, 255, 255, 1);
-      transition: background-color 1s ease, padding 1s cubic-bezier(.25, .45, .45, .95);
+      transition: background-color 1s ease;
     }
   }
 }
@@ -42,9 +42,8 @@
   height: 100%;
   background-position: center;
   background-size: cover;
-  transition: transform 12s ease,
-    opacity 2s ease;
-  opacity: .8;
+  opacity: 0.8;
+  transition: transform 1s ease, opacity 1s ease;
 }
 
 .MenuItem__content {
@@ -55,7 +54,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, .8);
+  background-color: rgba(255, 255, 255, .7);
+  transition: background-color 1s ease;
 }
 
 .MenuItem__title {
