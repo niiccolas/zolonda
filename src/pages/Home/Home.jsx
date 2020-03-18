@@ -7,7 +7,6 @@ import './Home.scss';
 
 const Home = () => (
   <div className="Home">
-    <h1 className="Home__title">home</h1>
     <Menu />
   </div>
 );
