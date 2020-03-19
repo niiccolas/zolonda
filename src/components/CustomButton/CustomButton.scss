@@ -1,21 +1,40 @@
+$google-blue: #4285f4;
+$google-blue-hover: #357ae8;
+
 .CustomButton {
   min-width: 165px;
   width: auto;
   height: 50px;
   letter-spacing: 0.5px;
-  line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
   background-color: black;
   color: white;
   text-transform: uppercase;
   font-weight: bolder;
-  border: none;
   cursor: pointer;
+  border: 1px solid black;
+  margin-right: 20px;
 
   &:hover {
     background-color: white;
     color: black;
-    border: 1px solid black;
   }
+}
+
+.CustomButton__googleSignIn {
+  background-color: $google-blue;
+  border: 1px solid $google-blue;
+
+  &:hover {
+    background-color: $google-blue-hover;
+    border: 1px solid $google-blue-hover;
+    color: white;
+  }
+}
+
+.CustomButtons {
+  // display: flex;
+  // justify-content: space-between;
+
 }
