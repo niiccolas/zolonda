@@ -12,6 +12,11 @@ const Header = ({ currentUser }) => (
       <Logo className="Header__logo" />
     </Link>
     <div className="Header__options">
+      {currentUser && (
+        <div className="Header__option user">
+          signed in: {currentUser.displayName}
+        </div>
+      )}
       <Link to="/shop" className="Header__option">
         SHOP
       </Link>
