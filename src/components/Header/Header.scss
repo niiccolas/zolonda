@@ -1,0 +1,28 @@
+.Header {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.Header__logoContainer {
+  width: 70px;
+  margin: 5px;
+}
+
+.Header__logo {
+  height: 100%;
+}
+
+.Header__options {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.Header__option {
+  padding: 10px 15px;
+}
