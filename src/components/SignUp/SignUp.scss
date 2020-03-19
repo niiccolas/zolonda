@@ -1,0 +1,8 @@
+.SignUp__inputs {
+  width: 70vw;
+  width: 100%;
+
+  @media only screen and (min-width: 860px) {
+    width: 50%;
+  }
+}

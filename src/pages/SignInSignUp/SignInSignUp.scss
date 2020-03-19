@@ -1,0 +1,11 @@
+.SignInSignUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media only screen and (min-width: 950px) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+}

@@ -5,6 +5,7 @@ import FormInput from '../FormInput/FormInput';
 import CustomButton from '../CustomButton/CustomButton';
 
 import './SignIn.scss';
+import '../../pages/SignInSignUp/SignInSignUp.common.scss';
 
 export default class SignIn extends Component {
   constructor(props) {
@@ -28,13 +29,14 @@ export default class SignIn extends Component {
 
   render() {
     const { email, password } = this.state;
+    const { className } = this.props;
 
     return (
-      <div>
+      <div className={className}>
         <h2>I already have an account</h2>
         <span>Sign in with your email and password</span>
 
-        <form onSubmit={this.handleSubmit} className="SignIn__inputs">
+        <form onSubmit={this.handleSubmit} className="SignInSignUp__inputs">
           <FormInput
             type="email"
             name="email"

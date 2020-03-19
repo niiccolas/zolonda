@@ -1,0 +1,19 @@
+.SignInSignUp__section {
+  width: 500px;
+
+  &:first-of-type {
+    margin-bottom: 50px;
+  }
+
+  @media only screen and (min-width: 950px) {
+    margin-bottom: 0;
+
+    &:first-of-type {
+      margin-right: 50px;
+    }
+  }
+}
+
+.SignInSignUp__inputs {
+  width: 100%;
+}
