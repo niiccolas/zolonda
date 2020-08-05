@@ -4,45 +4,46 @@ import { connect } from "react-redux";
 import { auth } from "../../firebase/firebase.utils";
 
 import { ReactComponent as Logo } from "../../assets/appLogo.svg";
+import CartIcon from "../CartIcon/CartIcon";
+import CartDropdown from "../CartDropdown/CartDropdown";
 
 import "./Header.scss";
 
-const Header = ({ currentUser }) => {
-  console.log(currentUser);
-
-  return (
-    <div className="Header">
-      <Link to="/" className="Header__logoContainer">
-        <Logo className="Header__logo" />
+const Header = ({ currentUser, hidden }) => (
+  <div className="Header">
+    <Link to="/" className="Header__logoContainer">
+      <Logo className="Header__logo" />
+    </Link>
+    <div className="Header__options">
+      {currentUser?.displayName && (
+        <div className="Header__option user">
+          signed in: {currentUser.displayName}
+        </div>
+      )}
+      <Link to="/shop" className="Header__option">
+        SHOP
       </Link>
-      <div className="Header__options">
-        {currentUser?.displayName && (
-          <div className="Header__option user">
-            signed in: {currentUser.displayName}
-          </div>
-        )}
-        <Link to="/shop" className="Header__option">
-          SHOP
+      <Link to="/contact" className="Header__option">
+        CONTACT
+      </Link>
+      {currentUser ? (
+        <div className="Header__option" onClick={() => auth.signOut()}>
+          SIGN OUT
+        </div>
+      ) : (
+        <Link to="/signin" className="Header__option">
+          SIGN IN
         </Link>
-        <Link to="/contact" className="Header__option">
-          CONTACT
-        </Link>
-        {currentUser ? (
-          <div className="Header__option" onClick={() => auth.signOut()}>
-            SIGN OUT
-          </div>
-        ) : (
-          <Link to="/signin" className="Header__option">
-            SIGN IN
-          </Link>
-        )}
-      </div>
+      )}
+      <CartIcon />
     </div>
-  );
-};
+    {!hidden && <CartDropdown />}
+  </div>
+);
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
 });
 
 export default connect(mapStateToProps)(Header);

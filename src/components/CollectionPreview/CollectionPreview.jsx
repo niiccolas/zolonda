@@ -1,27 +1,20 @@
-import React from 'react';
+import React from "react";
 
-import CollectionItem from '../CollectionItem/CollectionItem';
+import CollectionItem from "../CollectionItem/CollectionItem";
 
-import './CollectionPreview.scss';
+import "./CollectionPreview.scss";
 
 const CollectionPreview = ({ title, items }) => (
   <div className="CollectionPreview">
     <h1 className="CollectionPreview__title">
-      {(title && title.toUpperCase()) || 'data_error'}
+      {(title && title.toUpperCase()) || "data_error"}
     </h1>
     <div className="CollectionPreview__preview">
       {(items &&
         items
           .filter((_item, idx) => idx < 4)
-          .map(({ id, name, price, imageUrl }) => (
-            <CollectionItem
-              key={id}
-              name={name}
-              price={price}
-              imageUrl={imageUrl}
-            />
-          ))) ||
-        'data_error'}
+          .map((item) => <CollectionItem key={item.id} {...item} />)) ||
+        "data_error"}
     </div>
   </div>
 );
