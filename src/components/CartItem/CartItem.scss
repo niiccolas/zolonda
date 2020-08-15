@@ -1,0 +1,25 @@
+.CartItem {
+  font-size: 1.2rem;
+  width: 100%;
+  display: flex;
+  margin-bottom: .8rem;
+
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+}
+
+.CartItem__details {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+
+.CartItem__name {
+  font-weight: 600;
+}

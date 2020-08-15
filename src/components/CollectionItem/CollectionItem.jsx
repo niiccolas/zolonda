@@ -30,7 +30,7 @@ const CollectionItem = ({
     <CustomButton
       className="CollectionItem__button"
       onClick={() => {
-        addItem({ name, value, currency, id });
+        addItem({ name, value, currency, id, imageUrl });
       }}
     >
       Add to cart
