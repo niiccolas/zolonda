@@ -1,9 +1,20 @@
 .CollectionItem {
-  width: 22%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   height: 350px;
   align-items: center;
+  position: relative;
+
+  @media screen and (min-width: 600px) {
+    width: 22%;
+  }
+
+  &:hover {
+    .CollectionItem__button {
+      display: block;
+    }
+  }
 }
 
 .CollectionItem__image {
@@ -16,7 +27,7 @@
 
 .CollectionItem__footer {
   width: 100%;
-  height: 5%;
+  height: 15%;
   display: flex;
   justify-content: space-between;
   font-size: 18px;
@@ -25,4 +36,20 @@
 .CollectionItem__footerName {
   width: 90%;
   margin-bottom: 15px;
+}
+
+.CollectionItem__button {
+  display: none;
+  width: 80%;
+  opacity: 0.85;
+  position: absolute;
+  top: 225px;
+  margin-right: 0;
+  padding: 0 10px;
+  min-width: 0;
+  line-height: 18px;
+
+  &:hover {
+    border: 0;
+  }
 }

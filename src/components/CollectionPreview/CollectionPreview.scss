@@ -11,6 +11,10 @@
 }
 
 .CollectionPreview__preview {
-  display: flex;
+  display: block;
   justify-content: space-between;
+
+  @media screen and (min-width: 600px) {
+    display: flex;
+  }
 }
