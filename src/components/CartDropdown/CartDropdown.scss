@@ -7,7 +7,6 @@
     right: 2rem;
     left: revert;
     box-shadow: 0px 11px 21px 0px rgba(0, 0, 0, 0.22);
-
   }
 
   position: absolute;
@@ -45,4 +44,12 @@
   margin-top: auto;
   margin-right: 0;
   display: block;
+  min-height: 50px;
+  width: 100%;
+}
+
+.CartDropdown__empty {
+  font-size: 2rem;
+  margin: 50px auto;
+  text-decoration-line: underline;
 }
