@@ -13,14 +13,7 @@ const CollectionPreview = ({ title, items }) => (
       {(items &&
         items
           .filter((_item, idx) => idx < 4)
-          .map(({ id, name, price, imageUrl }) => (
-            <CollectionItem
-              key={id}
-              name={name}
-              price={price}
-              imageUrl={imageUrl}
-            />
-          ))) ||
+          .map(item => <CollectionItem key={item?.id} {...item} />)) ||
         'data_error'}
     </div>
   </div>
