@@ -6,31 +6,30 @@
   align-items: center;
   position: relative;
 
-
   .CustomButton {
     min-width: auto;
     width: 80%;
-    opacity: .7;
+    opacity: 0.7;
     position: absolute;
     top: 70%;
     display: none;
 
     &:hover {
-      opacity: .85;
+      opacity: 0.85;
     }
   }
 
   &:hover {
     .CollectionItem__image {
-      opacity: .8;
+      opacity: 0.8;
       transition: opacity 500ms ease;
     }
 
     .CustomButton {
       display: flex;
+      align-items: center;
     }
   }
-
 }
 
 .CollectionItem__image {

@@ -1,13 +1,13 @@
-import { CartActionTypes } from './cart.types';
+import { CartActionTypes } from "./cart.actionTypes";
 
-const initialState = {
-  hidden: true
+const INITIAL_STATE = {
+  isHidden: true,
 };
 
-const cartReducer = (state = initialState, { type }) => {
+const cartReducer = (state = INITIAL_STATE, { type }) => {
   switch (type) {
     case CartActionTypes.TOGGLE_CART_HIDDEN:
-      return { ...state, hidden: !state.hidden };
+      return { ...state, isHidden: !state.isHidden };
     default:
       return state;
   }
