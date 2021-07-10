@@ -10,7 +10,7 @@ const firebaseConfig = {
   storageBucket: 'zolonda-c08ae.appspot.com',
   messagingSenderId: '1017804209594',
   appId: '1:1017804209594:web:f0d7c8e171874ddfecb183',
-  measurementId: 'G-GGHXZGW38Q'
+  measurementId: 'G-GGHXZGW38Q',
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
@@ -28,7 +28,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         displayName,
         email,
         createdAt,
-        ...additionalData
+        ...additionalData,
       });
     } catch (e) {
       console.error('Error creating user: ', e.message);

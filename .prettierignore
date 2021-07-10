@@ -1,0 +1,11 @@
+.vscode-test/
+out/
+dist/
+test-fixtures/
+node_modules/
+.prettierignore
+*.svg
+*.png
+*.ico
+*.txt
+*.lock

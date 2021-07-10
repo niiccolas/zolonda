@@ -15,7 +15,7 @@ class SignUp extends Component {
       displayName: '',
       email: '',
       password: '',
-      confirmPassword: ''
+      confirmPassword: '',
     };
   }
 
@@ -31,14 +31,14 @@ class SignUp extends Component {
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         email,
-        password
+        password,
       );
       await createUserProfileDocument(user, { displayName });
       this.setState({
         displayName: '',
         email: '',
         password: '',
-        confirmPassword: ''
+        confirmPassword: '',
       });
     } catch (error) {
       console.error(error);

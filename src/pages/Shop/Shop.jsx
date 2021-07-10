@@ -10,7 +10,7 @@ class Shop extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      collections: SHOP_DATA
+      collections: SHOP_DATA,
     };
   }
 

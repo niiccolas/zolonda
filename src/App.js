@@ -1,27 +1,27 @@
-import React, { useEffect } from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
-import { connect } from "react-redux";
-import { setCurrentUser } from "./redux/user/user.actions";
+import React, { useEffect } from 'react';
+import { Switch, Route, Redirect } from 'react-router-dom';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
+import { connect } from 'react-redux';
+import { setCurrentUser } from './redux/user/user.actions';
 
-import "./App.scss";
+import './App.scss';
 
-import Header from "./components/Header/Header";
-import Home from "./pages/Home/Home";
-import Shop from "./pages/Shop/Shop";
-import SignInSignUp from "./pages/SignInSignUp/SignInSignUp";
+import Header from './components/Header/Header';
+import Home from './pages/Home/Home';
+import Shop from './pages/Shop/Shop';
+import SignInSignUp from './pages/SignInSignUp/SignInSignUp';
 
 const App = ({ currentUser, setCurrentUser }) => {
   useEffect(() => {
-    auth.onAuthStateChanged(async (userAuth) => {
+    auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
         // Fetch actual user data
-        userRef.onSnapshot((snapshot) =>
+        userRef.onSnapshot(snapshot =>
           setCurrentUser({
             id: snapshot.id,
             ...snapshot.data(),
-          })
+          }),
         );
       }
 
@@ -49,8 +49,8 @@ const mapStateToProps = ({ user: { currentUser } }) => ({
   currentUser,
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  setCurrentUser: (user) => dispatch(setCurrentUser(user)),
+const mapDispatchToProps = dispatch => ({
+  setCurrentUser: user => dispatch(setCurrentUser(user)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

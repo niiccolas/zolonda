@@ -1,15 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { auth } from "../../firebase/firebase.utils";
-import { connect } from "react-redux";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { auth } from '../../firebase/firebase.utils';
+import { connect } from 'react-redux';
 
-import { ReactComponent as Logo } from "../../assets/appLogo.svg";
-import CartIcon from "../CartIcon/CartIcon";
-import CartDropdown from "../CartDropdown/CartDropdown";
+import { ReactComponent as Logo } from '../../assets/appLogo.svg';
+import CartIcon from '../CartIcon/CartIcon';
+import CartDropdown from '../CartDropdown/CartDropdown';
 
-import "./Header.scss";
+import './Header.scss';
 
-const Header = ({ currentUser, isHidden }) => (
+const Header = ({ currentUser, isCartHidden }) => (
   <div className="Header">
     <Link to="/" className="Header__logoContainer">
       <Logo className="Header__logo" />
@@ -37,13 +37,16 @@ const Header = ({ currentUser, isHidden }) => (
       )}
       <CartIcon />
     </div>
-    {!isHidden && <CartDropdown />}
+    {!isCartHidden && <CartDropdown />}
   </div>
 );
 
-const mapStateToProps = ({ user: { currentUser }, cart: { isHidden } }) => ({
+const mapStateToProps = ({
+  user: { currentUser },
+  cart: { isCartHidden },
+}) => ({
   currentUser,
-  isHidden,
+  isCartHidden,
 });
 
 export default connect(mapStateToProps)(Header);
